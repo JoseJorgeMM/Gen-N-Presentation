@@ -11,7 +11,7 @@ const slides: SlideData[] = [
       name: 'Jose Jorge Muñoz',
       role: 'Profesor de Media Técnica en Desarrollo de Software',
     },
-    backgroundImageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    backgroundImageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1920&auto=format&fit=crop&ixlib-rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     type: 'content',
@@ -90,17 +90,11 @@ const slides: SlideData[] = [
 
 const App: React.FC = () => {
   return (
-    <>
-      <main className="bg-gray-900 text-white w-full">
-        {slides.map((slide, index) => (
-          <Slide key={index} data={slide} />
-        ))}
-      </main>
-      <footer className="bg-gray-800 text-center py-6 text-gray-400 border-t border-gray-700">
-        <p>&copy; 2024 Jose Jorge Muñoz - AI-LAB Jesús Rey</p>
-        <p className="text-sm mt-1">Presentación para GEN N / Reconocimientos Proyector 2025</p>
-      </footer>
-    </>
+    <main className="bg-gray-900 text-white w-full">
+      {slides.map((slide, index) => (
+        <Slide key={index} data={slide} />
+      ))}
+    </main>
   );
 };
 
