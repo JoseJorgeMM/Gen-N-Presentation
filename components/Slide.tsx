@@ -3,7 +3,6 @@ import { SlideData, IconType } from '../types';
 
 interface SlideProps {
   data: SlideData;
-  isFirst?: boolean;
 }
 
 // Icon Components
@@ -150,22 +149,16 @@ const renderContent = (data: SlideData) => {
 }
 
 
-export const Slide: React.FC<SlideProps> = ({ data, isFirst = false }) => {
+export const Slide: React.FC<SlideProps> = ({ data }) => {
   return (
     <section 
-        className="h-screen w-screen flex flex-col items-center justify-center snap-start relative bg-cover bg-center"
+        className="min-h-screen w-full flex flex-col items-center justify-center relative bg-cover bg-center py-20 lg:py-24 border-b-2 border-gray-800"
         style={{ backgroundImage: `url(${data.backgroundImageUrl})` }}
     >
         <div className="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
-        <div className="relative z-10 p-6 sm:p-10 text-center flex flex-col items-center justify-center w-full h-full gap-12 overflow-y-auto">
+        <div className="relative z-10 p-6 sm:p-10 text-center flex flex-col items-center justify-center w-full max-w-7xl mx-auto gap-12">
             {renderContent(data)}
         </div>
-        {isFirst && (
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center text-white animate-bounce">
-                <span className="text-sm">Scroll</span>
-                <ChevronDownIcon className="h-6 w-6" />
-            </div>
-        )}
     </section>
   );
 };

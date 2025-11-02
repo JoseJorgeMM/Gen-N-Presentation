@@ -55,7 +55,7 @@ const slides: SlideData[] = [
   {
     type: 'list',
     title: 'Nuestros Proyectos: Soluciones Reales',
-    mainContent: 'Nuestro proyecto principal es "ICFriend", una plataforma web gamificada, tipo Duolingo, para que los estudiantes se preparen para las pruebas ICFES. La app hace un diagnóstico inicial y luego la IA genera contenido personalizado para cada estudiante, con medallas y recompensas para mantener la motivación.',
+    mainContent: 'Nuestro proyecto principal es "ICFriend", una plataforma web gamificada, tipo Duolino, para que los estudiantes se preparen para las pruebas ICFES. La app hace un diagnóstico inicial y luego la IA genera contenido personalizado para cada estudiante, con medallas y recompensas para mantener la motivación.',
     mainContentLink: 'https://icfriend.lovable.app/',
     listItems: [
         'Un generador automático de actas administrativas para reducir el tiempo en papeleo.',
@@ -90,11 +90,17 @@ const slides: SlideData[] = [
 
 const App: React.FC = () => {
   return (
-    <main className="bg-gray-900 text-white h-screen w-screen overflow-y-auto overflow-x-hidden snap-y snap-mandatory">
-      {slides.map((slide, index) => (
-        <Slide key={index} data={slide} isFirst={index === 0} />
-      ))}
-    </main>
+    <>
+      <main className="bg-gray-900 text-white w-full">
+        {slides.map((slide, index) => (
+          <Slide key={index} data={slide} />
+        ))}
+      </main>
+      <footer className="bg-gray-800 text-center py-6 text-gray-400 border-t border-gray-700">
+        <p>&copy; 2024 Jose Jorge Muñoz - AI-LAB Jesús Rey</p>
+        <p className="text-sm mt-1">Presentación para GEN N / Reconocimientos Proyector 2025</p>
+      </footer>
+    </>
   );
 };
 
