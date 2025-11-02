@@ -31,7 +31,6 @@ const CodeIcon: React.FC<{className?: string}> = ({ className }) => (
 const CommunityIcon: React.FC<{className?: string}> = ({ className }) => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={className}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m-7.289 2.72a9.09 9.09 0 0 1-3.741-.479 3 3 0 0 1 4.682-2.72M12 12.75a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Z" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 12.75c-2.485 0-4.5-2.015-4.5-4.5s2.015-4.5 4.5-4.5 4.5 2.015 4.5 4.5-2.015 4.5-4.5 4.5Z" />
     </svg>
 );
 const RocketIcon: React.FC<{className?: string}> = ({ className }) => (
@@ -83,7 +82,14 @@ const renderContent = (data: SlideData) => {
                     <h2 className="mt-4 text-2xl md:text-3xl lg:text-4xl font-light text-gray-200 drop-shadow-md">
                         {data.subtitle}
                     </h2>
-                    <div className="mt-12 bg-black/30 backdrop-blur-md p-6 rounded-xl border border-white/20 shadow-lg max-w-md mx-auto">
+                    <div className="mt-12 bg-black/30 backdrop-blur-md p-6 rounded-xl border border-white/20 shadow-lg max-w-md mx-auto flex flex-col items-center">
+                        {data.creator.imageUrl && (
+                            <img
+                                src={data.creator.imageUrl}
+                                alt={`Foto de ${data.creator.name}`}
+                                className="w-32 h-32 rounded-full object-cover border-4 border-cyan-400 shadow-lg mb-4"
+                            />
+                        )}
                         <p className="text-2xl font-semibold text-white tracking-wide">{data.creator.name}</p>
                         <p className="mt-2 text-md text-cyan-300">{data.creator.role}</p>
                     </div>

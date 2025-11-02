@@ -6,6 +6,7 @@ export interface BaseSlideData {
 export interface Creator {
     name: string;
     role: string;
+    imageUrl?: string;
 }
 
 export interface TitleSlideData extends BaseSlideData {

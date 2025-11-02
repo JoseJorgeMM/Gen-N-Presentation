@@ -10,6 +10,7 @@ const slides: SlideData[] = [
     creator: {
       name: 'Jose Jorge Muñoz',
       role: 'Profesor de Media Técnica en Desarrollo de Software',
+      imageUrl: 'me.png',
     },
     backgroundImageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1920&auto=format&fit=crop&ixlib-rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
@@ -50,7 +51,7 @@ const slides: SlideData[] = [
         text: 'Conecto a los estudiantes con el ecosistema de la ciudad, llevándolos a eventos para que conozcan otros proyectos, se inspiren y vean que lo que aprenden tiene un valor real.',
       },
     ],
-    backgroundImageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=1920&auto=format&fit=crop&ixlib.rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    backgroundImageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=1920&auto=format&fit=crop&ixlib-rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     type: 'list',
